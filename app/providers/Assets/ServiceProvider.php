@@ -43,7 +43,7 @@ class ServiceProvider implements ServiceProviderInterface
         if (environment('development')) {
             $version = time();
         } else {
-            $version = config('app.version', '9999');
+            $version = config('app.version', '9999') . '-' . time();
         }
 
         $highlightVersion = config('highlight.version', '9.11.0');
